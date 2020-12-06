@@ -4,42 +4,24 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+	public float speed;	
 
-    [SerializeField] Transform playerCamera = null;
-    [SerializeField] float mouseSensitivity = 3.5f;
-    [SerializeField] float walkSpeed = 6.0f;
-
-    CharacterController controller = null;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        controller = GetComponent<CharacterController>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        UpdateMouseLook();
-        UpdateMovement();
-    }
-
-    void UpdateMouseLook()
-    {
-        Vector2 mouseDelta = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
-
-        transform.Rotate(Vector3.up * mouseDelta.x * mouseSensitivity);
-    }
+	private Rigidbody rb;
 
 
-    void UpdateMovement()
-    {
-        Vector2 inputDir = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        inputDir.Normalize();
+	void Start ()
+	{
+		rb = GetComponent<Rigidbody>();
+	}
 
-        Vector3 velocity = (transform.forward * inputDir.y + transform.right * inputDir.x) * walkSpeed;
 
-        controller.Move(velocity * Time.deltaTime);
-    }
+	void FixedUpdate ()
+	{
+		float moveHorizontal = Input.GetAxis ("Horizontal");
+		float moveVertical = Input.GetAxis ("Vertical");
 
+		Vector3 movement = new Vector3 (moveHorizontal, 0, moveVertical);
+
+		rb.AddForce (movement * speed);
+	}
 }
