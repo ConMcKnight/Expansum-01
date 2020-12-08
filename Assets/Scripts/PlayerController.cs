@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
 	public float speed;	
 
-	private Rigidbody rb;
+	public Rigidbody rb;
 
 
 	void Start ()
