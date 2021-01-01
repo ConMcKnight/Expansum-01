@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 	public float speed;	
 
 	public Rigidbody rb;
+	public int count;
 
 
 	void Start ()
@@ -24,4 +25,12 @@ public class PlayerController : MonoBehaviour
 
 		rb.AddForce (movement * speed);
 	}
+	void OnTriggerEnter(Collider other)
+{
+if (other.gameObject.CompareTag ("Pick Up"))
+{ 
+other.gameObject.SetActive (false);
+count = count + 1;
+}
+}
 }
