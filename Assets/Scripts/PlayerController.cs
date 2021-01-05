@@ -7,12 +7,13 @@ public class PlayerController : MonoBehaviour
 	public float speed;	
 
 	public Rigidbody rb;
-	public int count;
+	public int KeyCardcount;
 
 
 	void Start ()
 	{
 		rb = GetComponent<Rigidbody>();
+		KeyCardcount = 0;
 	}
 
 
@@ -26,11 +27,13 @@ public class PlayerController : MonoBehaviour
 		rb.AddForce (movement * speed);
 	}
 	void OnTriggerEnter(Collider other)
-{
-if (other.gameObject.CompareTag ("Pick Up"))
-{ 
-other.gameObject.SetActive (false);
-count = count + 1;
-}
-}
+		{
+			if (other.gameObject.CompareTag ("KeyCard"))
+				{ 
+					other.gameObject.SetActive (false);
+					KeyCardcount = KeyCardcount + 1;
+				}
+		}
+		
+		 
 }
