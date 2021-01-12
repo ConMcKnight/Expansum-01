@@ -5,10 +5,11 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
 
-    public int maxHealth = 100;
+    public int maxHealth = 10000;
     public int currentHealth;
-
-    public HealthBar healthBar;
+    public int health;
+    public int oxygenLoss = 1;
+    public HealthBar healthBar; 
 
     // Start is called before the first frame update
     void Start()
@@ -20,16 +21,9 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage(20);
-        }
+       currentHealth -= oxygenLoss;
+        
     }
 
-    void TakeDamage(int damage)
-    {
-        currentHealth -= damage;
-
-        healthBar.SetHealth(currentHealth);
-    }
+   
 }
