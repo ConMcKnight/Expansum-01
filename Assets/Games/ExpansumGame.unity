@@ -28516,6 +28516,7 @@ GameObject:
   - component: {fileID: 479558620}
   - component: {fileID: 479558619}
   - component: {fileID: 479558618}
+  - component: {fileID: 479558623}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -28535,7 +28536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795b3e314d3144e2f8baee1ac2d41d15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DropDownMove: {fileID: 0}
+  DropDownMove: {fileID: 479558617}
 --- !u!65 &479558619
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28610,6 +28611,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &479558623
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479558617}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0a5c38153a128b34596bfb000b51fa57, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &488237104
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -97696,7 +97716,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 408.2, y: -141.79999}
+  m_AnchoredPosition: {x: 408.2, y: -246}
   m_SizeDelta: {x: 267.9372, y: 13.5401}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1392495311
@@ -120497,7 +120517,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 290.3, y: -148.7}
+  m_AnchoredPosition: {x: 290.3, y: -254}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1845415556
@@ -128514,6 +128534,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
+  health: 0
+  oxygenLoss: 1
   healthBar: {fileID: 1389291336}
 --- !u!114 &1773622592579468
 MonoBehaviour:
