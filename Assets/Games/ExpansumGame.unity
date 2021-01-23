@@ -133496,6 +133496,7 @@ GameObject:
   - component: {fileID: 4181875941602797528}
   - component: {fileID: 4181875941602797529}
   - component: {fileID: 4181875941602797534}
+  - component: {fileID: 4181875941602797533}
   m_Layer: 0
   m_Name: Roof
   m_TagString: Untagged
@@ -133503,6 +133504,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &4181875941602797533
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4181875941602797532}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000002, y: 30.490969, z: 1.0000002}
+  m_Center: {x: 0.0000004932798, y: -14.745489, z: -0.0000002384186}
 --- !u!65 &4181875941602797534
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -133514,8 +133528,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 0.1435113, z: 1}
+  m_Center: {x: 0, y: 0.42824626, z: 0}
 --- !u!4 &4181875941602797535
 Transform:
   m_ObjectHideFlags: 0

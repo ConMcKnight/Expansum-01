@@ -26,7 +26,14 @@ public class PlayerController : MonoBehaviour
 		}
 		void SetCountText()
 		{
+			if (KeyCardcount == 9) 
+			{
+				countText.text = "Retutn to Cockpit";
+			}
+			else
+			{
 			countText.text = "Key Cards: " + KeyCardcount.ToString() + "/9";
+			}
 		}
 		
 		 
